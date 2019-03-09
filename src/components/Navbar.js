@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+// import github from '../img/github-icon.svg'
+import logo from '../img/retronetro-logo.svg'
+import gatsby from '../img/gatsby.svg'
 
 const Navbar = class extends React.Component {
   componentDidMount() {
@@ -30,14 +31,14 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-fixed-top is-transparent"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={logo} alt="Kaldi" style={{ width: '150px' }} />
             </Link>
             {/* Hamburger menu */}
             <div className="navbar-burger burger" data-target="navMenu">
@@ -67,12 +68,12 @@ const Navbar = class extends React.Component {
             <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
-                href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+                href="https://www.gatsbyjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="icon">
-                  <img src={github} alt="Github" />
+                  <img className="gatsby" src={gatsby} alt="GatsbyJS" />
                 </span>
               </a>
             </div>

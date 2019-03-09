@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"explorer.openEditors.visible": 30,
+		"debug.console.fontSize": 18,
+		"telemetry.enableTelemetry": false,
+		"prettier.arrowParens": "always"
+	}
+}
