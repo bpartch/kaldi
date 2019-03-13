@@ -8,6 +8,10 @@
 		"explorer.openEditors.visible": 30,
 		"debug.console.fontSize": 18,
 		"telemetry.enableTelemetry": false,
-		"prettier.arrowParens": "always"
+		"prettier.arrowParens": "always",
+		"editor.wordWrap": "wordWrapColumn",
+		"editor.renderIndentGuides": false,
+		"editor.scrollBeyondLastLine": false,
+		"editor.smoothScrolling": true
 	}
 }

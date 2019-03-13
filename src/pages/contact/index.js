@@ -1,6 +1,6 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
+import Layout from '../../layouts/index.js'
 
 function encode(data) {
   return Object.keys(data)
@@ -36,10 +36,11 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
+        <section className="section contact-page">
           <div className="container">
             <div className="content">
               <h1>Contact</h1>
+              <p>Please fill out the form below. I will reply ASAP.</p>
               <form
                 name="contact"
                 method="post"
@@ -58,7 +59,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
-                    Your name
+                    Name
                   </label>
                   <div className="control">
                     <input
@@ -82,6 +83,21 @@ export default class Index extends React.Component {
                       name={'email'}
                       onChange={this.handleChange}
                       id={'email'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'subject'}>
+                    Subject
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'text'}
+                      name={'subject'}
+                      onChange={this.handleChange}
+                      id={'subject'}
                       required={true}
                     />
                   </div>

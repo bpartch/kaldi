@@ -10,6 +10,15 @@ $primary-invert: $retnet-red-invert
 $body-color: #333
 $black: #000
 
+.section
+  padding: 0 1.5rem 3rem 1.5rem !important
+
+.section.about-page,
+.section.home-page,
+.section.contact-page,
+.section.blog-post
+  padding-top: 30px !important
+
 .navbar
   background-color: #000 !important
 
@@ -79,20 +88,22 @@ a.navbar-item
   &:hover
     color: #ccc !important
 
-.navbar-item .icon img.gatsby
+img.gatsby
   background-color: rebeccapurple
+  fill: currentColor
 
 
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
   height: 1.5rem
+  fill: red
 
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
 
 footer.footer
-  padding: 3rem 0rem 0rem
+  padding: 3rem 0rem 3rem 0rem
   background-color: transparent
 
 //Menu overrides
@@ -112,6 +123,10 @@ $menu-label-color: $white-ter
 .menu-list
   list-style: none !important
   text-align: left
+  margin-left: 0 !important
+
+.menu-list li
+  text-indent: 1rem
 
 .social
   padding: 2em
