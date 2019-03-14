@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { StaticQuery, graphql } from 'gatsby'
+
 import Transition from "../components/transition"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -8,7 +9,6 @@ import Footer from '../components/Footer'
 import '../components/all.sass'
 
 const TemplateWrapper = ({ children, location }) => (
-
   <StaticQuery query={graphql`
       query TestQuery {
         site {
@@ -19,7 +19,6 @@ const TemplateWrapper = ({ children, location }) => (
         }
       }
     `}
-
  render={data => (
   <div>
     <Helmet>
@@ -38,18 +37,19 @@ const TemplateWrapper = ({ children, location }) => (
       <meta property="og:url" content="/" />
       <meta property="og:image" content="/img/og-image.jpg" />
     </Helmet>
+
     <Navbar />
-    <div>
-      <Transition location={location}>{children}</Transition>
-    </div>
+      <Transition location={location}>
+        {children}
+      </Transition>
     <Footer />
+
   </div>
  )}
  />
 );
 
-TemplateWrapper.defaultProps = {
-    location: {}
-}
+// this is important or it don't work!
+TemplateWrapper.defaultProps = { location: {} }
 
 export default TemplateWrapper
