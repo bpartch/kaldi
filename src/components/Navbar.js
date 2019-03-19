@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import DarkModeToggle from "./DarkModeToggle";
+
 import logo from '../img/retronetro-logo.svg'
-import gatsby from '../img/gatsby.svg'
+// import gatsby from '../img/gatsby.svg'
 
 const Navbar = class extends React.Component {
   componentDidMount() {
@@ -65,16 +67,9 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://www.gatsbyjs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
                 <span className="icon">
-                  <img className="gatsby" src={gatsby} alt="GatsbyJS" />
+                  <DarkModeToggle />
                 </span>
-              </a>
             </div>
           </div>
         </div>
